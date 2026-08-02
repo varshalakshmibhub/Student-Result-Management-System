@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Marks</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/add_student">Add Student</a>
+        <a href="/add_marks">Add Marks</a>
+        <a href="/view_results">View Results</a>
+    </div>
+
+    <div class="container">
+
+        <h1>Add Student Marks</h1>
+
+        <form method="POST">
+
+            <input type="text"
+                   name="usn"
+                   placeholder="Enter USN"
+                   required>
+
+            <br><br>
+
+            <input type="number"
+                   name="subject1"
+                   placeholder="Enter Subject 1 Marks"
+                   min="0"
+                   max="100"
+                   required>
+
+            <br><br>
+
+            <input type="number"
+                   name="subject2"
+                   placeholder="Enter Subject 2 Marks"
+                   min="0"
+                   max="100"
+                   required>
+
+            <br><br>
+
+            <input type="number"
+                   name="subject3"
+                   placeholder="Enter Subject 3 Marks"
+                   min="0"
+                   max="100"
+                   required>
+
+            <br><br>
+
+            <button type="submit">
+                Add Marks
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

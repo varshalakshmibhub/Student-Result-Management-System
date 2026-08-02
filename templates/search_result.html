@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Search Result</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Result</h1>
+
+        {% if data %}
+
+        <table border="1" width="100%">
+
+            <tr>
+                <th>USN</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Semester</th>
+                <th>Subject1</th>
+                <th>Subject2</th>
+                <th>Subject3</th>
+                <th>Total</th>
+                <th>Percentage</th>
+                <th>Grade</th>
+            </tr>
+
+            <tr>
+
+                <td>{{ data[0] }}</td>
+                <td>{{ data[1] }}</td>
+                <td>{{ data[2] }}</td>
+                <td>{{ data[3] }}</td>
+                <td>{{ data[4] }}</td>
+                <td>{{ data[5] }}</td>
+                <td>{{ data[6] }}</td>
+                <td>{{ data[7] }}</td>
+                <td>{{ data[8] }}</td>
+                <td>{{ data[9] }}</td>
+
+            </tr>
+
+        </table>
+
+        {% else %}
+
+        <h2>No Record Found</h2>
+
+        {% endif %}
+
+    </div>
+
+</body>
+</html>
